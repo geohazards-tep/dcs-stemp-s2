@@ -65,7 +65,8 @@ function getDem() {
   
   ciop-log "INFO" "[getDem function] Extracting metalink"
   
-  metalink=$(cat ${target}/response.xml | xsltproc /usr/lib/ciop/xsl/wps2meta.xsl - | sed 's#\(.*OPEN\).*#\1#g')
+  #metalink=$(cat ${target}/response.xml | xsltproc /usr/lib/ciop/xsl/wps2meta.xsl - | sed 's#\(.*OPEN\).*#\1#g')
+  metalink=$(cat ${target}/response.xml | xsltproc /usr/lib/ciop/xsl/wps2meta.xsl - | tr -d '\r')
 
   ciop-log "INFO" "[getDem function] Metalink: ${metalink}"
   
