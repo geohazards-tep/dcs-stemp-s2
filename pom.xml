@@ -49,6 +49,7 @@
                   <!-- Set here the dependencies installed with 'sudo yum install'-->
                   <requires>
                     <require>idl</require>
+                    <require>openjpeg2</require>
                     <require>miniconda</require>
                     <require>STEMP-S2</require>
                   </requires>
