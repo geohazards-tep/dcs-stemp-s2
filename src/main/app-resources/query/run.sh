@@ -55,6 +55,7 @@ function main() {
 
   ciop-log "INFO" "Nearest atmosferic station: ${station},${region}"
   ciop-log "INFO" "Geometry in WKT: ${geom}"
+  ciop-log "INFO" "hostname: $( hostname -f )"
 
   if [ "${LOCAL_DATA}" == "true" ]; then
     

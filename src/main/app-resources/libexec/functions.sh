@@ -187,7 +187,7 @@ function getData() {
   if [ "${ref:0:4}" == "file" ] || [ "${ref:0:1}" == "/" ]; then
     enclosure=${ref}
   else
-  url=$( opensearch-client "${ref}" enclosure )
+  url=$( opensearch-client -p do=terradue "${ref}" enclosure )
   res=$?
 
   ciop-log "INFO" "[getData function] url file db return code: ${res}"
